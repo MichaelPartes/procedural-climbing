@@ -40,28 +40,28 @@ namespace ProceduralClimbing
             delta = Time.deltaTime;
             HandleAnim(moveDir, isMid);
 
-            if(!isMid)
-            {
-                UpdateGoals(moveDir);
-                prevMovDir = moveDir;
-            }
-            else
-            {
-                UpdateGoals(prevMovDir);
-            }
+            //if(!isMid)
+            //{
+            //    UpdateGoals(moveDir);
+            //    prevMovDir = moveDir;
+            //}
+            //else
+            //{
+            //    UpdateGoals(prevMovDir);
+            //}
 
-            IKSnapshot ik = CreateSnapShot(origin);
-            CopySnapshot(ref current, ik);
+            //IKSnapshot ik = CreateSnapShot(origin);
+            //CopySnapshot(ref current, ik);
 
-            SetIKPosition(isMid, goals.lh, current.lh, AvatarIKGoal.LeftHand);
-            SetIKPosition(isMid, goals.rh, current.rh, AvatarIKGoal.RightHand);
-            SetIKPosition(isMid, goals.lf, current.lf, AvatarIKGoal.LeftFoot);
-            SetIKPosition(isMid, goals.rf, current.rf, AvatarIKGoal.RightFoot);
+            //SetIKPosition(isMid, goals.lh, current.lh, AvatarIKGoal.LeftHand);
+            //SetIKPosition(isMid, goals.rh, current.rh, AvatarIKGoal.RightHand);
+            //SetIKPosition(isMid, goals.lf, current.lf, AvatarIKGoal.LeftFoot);
+            //SetIKPosition(isMid, goals.rf, current.rf, AvatarIKGoal.RightFoot);
 
-            UpdateIKWeight(AvatarIKGoal.LeftHand, 1);
-            UpdateIKWeight(AvatarIKGoal.RightHand, 1);
-            UpdateIKWeight(AvatarIKGoal.LeftFoot, 1);
-            UpdateIKWeight(AvatarIKGoal.RightFoot, 1);
+            //UpdateIKWeight(AvatarIKGoal.LeftHand, 1);
+            //UpdateIKWeight(AvatarIKGoal.RightHand, 1);
+            //UpdateIKWeight(AvatarIKGoal.LeftFoot, 1);
+            //UpdateIKWeight(AvatarIKGoal.RightFoot, 1);
         }
 
         void UpdateGoals(Vector3 moveDir)
